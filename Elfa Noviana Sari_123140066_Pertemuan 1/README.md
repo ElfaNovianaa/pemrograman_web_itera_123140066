@@ -67,14 +67,13 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
 
 ## Penjelasan Teknis
 1. localStorage (Penyimpanan Data)
-   javascript
+   ```javascript
      function saveToStorage() {
      localStorage.setItem("tugas", JSON.stringify(tasks));
    }
-   
-
+   ```
 3. Validasi Form
-   javascript
+   ```javascript
    document.getElementById("formTugas").addEventListener("submit", function(e) {
     e.preventDefault();
     
@@ -100,10 +99,10 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
     
     // Jika valid, tambahkan tugas...
    });
-   
+   ```
 
 3. Filter dan pencarian real-time
-   javascript
+   ```javascript
    function displayTasks() {
     const searchVal = document.getElementById("cari").value.toLowerCase();
     const filterVal = document.getElementById("filterStatus").value;
@@ -121,10 +120,10 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
     // Event listener untuk real-time
     document.getElementById("filterStatus").addEventListener("change", displayTasks);
     document.getElementById("cari").addEventListener("input", displayTasks);
-   
+    ```
 
 4. Update statistik
-   javascript
+   ```javascript
    function updateStats() {
     const total = tasks.length;
     const done = tasks.filter(t => t.selesai).length;
@@ -134,8 +133,7 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
     document.getElementById("tugasSelesai").textContent = done;
     document.getElementById("tugasBelum").textContent = notDone;
     }
-   
-   
+    ```
 
 ## Fitur yang Sudah Diimplementasikan
 
@@ -148,6 +146,7 @@ CRUD (Create, Read, Update, Delete) tugas lengkap
 - Modal untuk edit tugas  
 - Konfirmasi sebelum hapus  
 - Toggle status selesai/belum
+
 
 
 
