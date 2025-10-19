@@ -51,8 +51,10 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
 4. Website siap digunakan!
 
 ## Tampilan Website
-1. Tampilan utama dengan daftar tugas
-2. 
+1. Tampilan utama untuk pengisian nama tugas, nama mata kuliah, deskripsi tugas (opsional), dan deadline tugas
+   <img width="868" height="659" alt="image" src="https://github.com/user-attachments/assets/dae42fe8-bdf6-44d5-b9a8-ab7be7fb6ea0" />
+
+3. 
 ## Penjelasan Teknis
 ### localStorage
 Aplikasi ini menggunakan localStorage untuk menyimpan data tugas. Data disimpan dalam format JSON dan akan tetap ada meskipun browser ditutup.
@@ -63,7 +65,6 @@ localStorage.setItem("tugas", JSON.stringify(tasks));
 
 // Mengambil data
 let tasks = JSON.parse(localStorage.getItem("tugas")) || [];
-```
 
 ### Validasi Form
 Aplikasi memiliki validasi untuk memastikan data yang diinput valid:
@@ -84,4 +85,5 @@ Statistik jumlah tugas
 Responsive design  
 Modal untuk edit tugas  
 Konfirmasi sebelum hapus  
+
 Toggle status selesai/belum
