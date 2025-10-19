@@ -1,4 +1,4 @@
-# Website Manajemen Tugas Mahasiswa
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2475585f-3b1b-40c0-be53-97c316639332" /># Website Manajemen Tugas Mahasiswa
 
 Repository ini berisi proyek website manajemen tugas mahasiswa sebagai bagian dari tugas praktikum mata kuliah Pemrograman aplikasi Website.
 
@@ -67,13 +67,14 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
 
 ## Penjelasan Teknis
 1. localStorage (Penyimpanan Data)
-   '''javascript
-   function saveToStorage() {
-    localStorage.setItem("tugas", JSON.stringify(tasks));
-}
+   javascript
+     function saveToStorage() {
+     localStorage.setItem("tugas", JSON.stringify(tasks));
+   }
+   
 
-3. *Validasi Form*
-   '''javascript
+3. Validasi Form
+   javascript
    document.getElementById("formTugas").addEventListener("submit", function(e) {
     e.preventDefault();
     
@@ -98,11 +99,11 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
     }
     
     // Jika valid, tambahkan tugas...
-
-});
+   });
+   
 
 3. Filter dan pencarian real-time
-   '''javascript
+   javascript
    function displayTasks() {
     const searchVal = document.getElementById("cari").value.toLowerCase();
     const filterVal = document.getElementById("filterStatus").value;
@@ -115,14 +116,15 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
                           (filterVal === "belum" && !task.selesai);
         return matchSearch && matchStatus;
     });
-}
+    }
 
-// Event listener untuk real-time
-document.getElementById("filterStatus").addEventListener("change", displayTasks);
-document.getElementById("cari").addEventListener("input", displayTasks);
+    // Event listener untuk real-time
+    document.getElementById("filterStatus").addEventListener("change", displayTasks);
+    document.getElementById("cari").addEventListener("input", displayTasks);
+   
 
 4. Update statistik
-   '''javascript
+   javascript
    function updateStats() {
     const total = tasks.length;
     const done = tasks.filter(t => t.selesai).length;
@@ -131,7 +133,7 @@ document.getElementById("cari").addEventListener("input", displayTasks);
     document.getElementById("totalTugas").textContent = total;
     document.getElementById("tugasSelesai").textContent = done;
     document.getElementById("tugasBelum").textContent = notDone;
-}
+    }
    
 
 ## Fitur yang Sudah Diimplementasikan
@@ -145,6 +147,7 @@ CRUD (Create, Read, Update, Delete) tugas lengkap
 - Modal untuk edit tugas  
 - Konfirmasi sebelum hapus  
 - Toggle status selesai/belum
+
 
 
 
