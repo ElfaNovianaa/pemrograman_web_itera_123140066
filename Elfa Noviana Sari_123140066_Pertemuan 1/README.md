@@ -1,4 +1,4 @@
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2475585f-3b1b-40c0-be53-97c316639332" /># Website Manajemen Tugas Mahasiswa
+# Website Manajemen Tugas Mahasiswa
 
 Repository ini berisi proyek website manajemen tugas mahasiswa sebagai bagian dari tugas praktikum mata kuliah Pemrograman aplikasi Website.
 
@@ -147,6 +147,7 @@ CRUD (Create, Read, Update, Delete) tugas lengkap
 - Modal untuk edit tugas  
 - Konfirmasi sebelum hapus  
 - Toggle status selesai/belum
+
 
 
 
