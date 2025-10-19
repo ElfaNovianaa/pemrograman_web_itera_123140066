@@ -54,22 +54,22 @@ Aplikasi website to do list sederhana untuk membantu mahasiswa mengelola tugas-t
 1. *Tampilan utama untuk pengisian nama tugas, nama mata kuliah, deskripsi tugas (opsional), dan deadline tugas*
    
    <img width="1918" height="704" alt="image" src="https://github.com/user-attachments/assets/b8bbb443-bc1a-4d09-b2b7-f0dd02136bc5" />
-3. *Tampilan daftar tugas, terdapat statistika total, tugas selesai, dan tugas belum selesai serta detail tugas yang sudah ditambahkan*
-4. 
+2. *Tampilan daftar tugas, terdapat statistika total, tugas selesai, dan tugas belum selesai serta detail tugas yang sudah ditambahkan*
+ 
    <img width="1915" height="1000" alt="image" src="https://github.com/user-attachments/assets/90207346-5fa5-428d-89ef-5a50475057c1" />
-5. *Tampilan fitur mencari tugas berdasarkan semua tugas, tugas selesai, dan tugas belum selesai*
-6. 
+3. *Tampilan fitur mencari tugas berdasarkan semua tugas, tugas selesai, dan tugas belum selesai*
+ 
    <img width="1913" height="492" alt="image" src="https://github.com/user-attachments/assets/d08e30ba-9a63-4e5e-ae2f-c2838ac45a28" />
-7. *Tampilan tugas ketika di klik 'selesai' dan edit tugas*
+4. *Tampilan tugas ketika di klik 'selesai' dan edit tugas*
    
    <img width="1917" height="681" alt="image" src="https://github.com/user-attachments/assets/e3dbdb09-3c2f-4f6a-8cb9-de70b00b1eb4" />
    <img width="1918" height="886" alt="image" src="https://github.com/user-attachments/assets/f4532139-b03c-4544-ad21-df2237a404d5" />
 
 ## Penjelasan Teknis
 1. localStorage (Penyimpanan Data)
-   function saveToStorage() {
+   '''function saveToStorage() {
     localStorage.setItem("tugas", JSON.stringify(tasks));
-}
+}'''
 
 2. *Validasi Form*
    document.getElementById("formTugas").addEventListener("submit", function(e) {
@@ -141,5 +141,6 @@ CRUD (Create, Read, Update, Delete) tugas lengkap
 - Modal untuk edit tugas  
 - Konfirmasi sebelum hapus  
 - Toggle status selesai/belum
+
 
 
