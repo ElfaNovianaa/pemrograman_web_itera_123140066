@@ -11,8 +11,6 @@ Aplikasi ini menampilkan:
 - Informasi waktu & tanggal secara real-time  
 Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskipun browser ditutup atau halaman direfresh.
 
----
-
 ## Fitur Utama Pada Aplikasi ini
 
 ### 1. Navigasi Dinamis
@@ -42,7 +40,7 @@ Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskip
 
 ---
 
-## ⚙️ Teknologi & Konsep yang Digunakan
+## Teknologi & Konsep yang Digunakan
 
 | Aspek | Implementasi |
 |-------|---------------|
@@ -54,7 +52,7 @@ Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskip
 
 ---
 
-## ✨ Implementasi Fitur ES6+
+## Implementasi Fitur ES6+
 
 | Fitur ES6+ | Implementasi |
 |-------------|--------------|
@@ -105,15 +103,19 @@ renderSummary();
 
 ## Screenshot Aplikasi
 1. Halaman Beranda dengan ringkasan kegiatan
+   
    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a57fc9d2-554f-470f-ae8c-f1720cfec32a" />
 
 2. Jadwal Tugas perkuliahan statis
+   
    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/55d85d56-398b-49e6-b226-5edf0f062125" />
 
 3. Form interaktif untuk menambah kegiatan
+   
    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2b0af482-93d1-4e46-92cf-79cbf3da4f54" />
 
 4. Daftar kegiatan dengan tombol edit, hapus, dan tandai selesai
+   
    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0ad630d6-bd30-406e-861b-0eb58490e6ef" />
 
 
@@ -125,4 +127,5 @@ renderSummary();
 3. Tambahkan kegiatan baru melalui form.
 4. Data akan otomatis tersimpan di localStorage browser.
 5. Navigasi antara menu Beranda, Jadwal Kuliah, dan Jadwal Kegiatan tanpa reload halaman.
+
 
