@@ -1,13 +1,17 @@
 # Aplikasi Personal Dashboard – Dashboard Mahasiswa
 
 ## Deskripsi Singkat
-**Dashboard Mahasiswa** adalah aplikasi web interaktif berbasis **HTML, CSS, dan JavaScript (ES6+)** yang berfungsi sebagai **personal dashboard** untuk mahasiswa.  
+Dashboard Mahasiswa** adalah aplikasi web interaktif yang berfungsi sebagai **asisten pribadi digital bagi mahasiswa**.  
+Aplikasi ini membantu pengguna **mengatur jadwal kuliah, mencatat kegiatan, dan memantau waktu secara real-time** melalui satu halaman dashboard yang modern dan responsif. Semua data kegiatan tersimpan otomatis di **localStorage**, sehingga tidak akan hilang meskipun browser ditutup.
+
 Aplikasi ini menampilkan:
 - Jadwal kuliah harian  
 - Daftar kegiatan (organisasi, akademik, kepanitiaan, dan kuliah)  
 - Ringkasan tugas dan kegiatan hari ini  
 - Informasi waktu & tanggal secara real-time  
 Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskipun browser ditutup atau halaman direfresh.
+
+---
 
 ## Fitur Utama Pada Aplikasi ini
 
@@ -36,6 +40,7 @@ Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskip
 ### 5. Penyimpanan Lokal
 - Semua data tersimpan otomatis di **localStorage**, sehingga data tetap ada meskipun browser ditutup.
 
+---
 
 ## ⚙️ Teknologi & Konsep yang Digunakan
 
@@ -61,7 +66,7 @@ Seluruh data kegiatan disimpan di **localStorage**, sehingga tidak hilang meskip
 
 ---
 
-## 🧠 Fungsi penyimpanan
+## Fungsi penyimpanan
 
 ```javascript
 function saveToLocalStorage() {
@@ -96,14 +101,28 @@ renderSummary();
   }
 ]
 ```
+---
 
-##📸 Screenshot Aplikasi
-1.
+## Screenshot Aplikasi
+1. Halaman Beranda dengan ringkasan kegiatan
+   <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a57fc9d2-554f-470f-ae8c-f1720cfec32a" />
+
+2. Jadwal Tugas perkuliahan statis
+   <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/55d85d56-398b-49e6-b226-5edf0f062125" />
+
+3. Form interaktif untuk menambah kegiatan
+   <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2b0af482-93d1-4e46-92cf-79cbf3da4f54" />
+
+4. Daftar kegiatan dengan tombol edit, hapus, dan tandai selesai
+   <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0ad630d6-bd30-406e-861b-0eb58490e6ef" />
 
 
-🚀 Cara Menjalankan Aplikasi
+---
+
+## Cara Menjalankan Aplikasi
 1. Unduh seluruh file (index.html, style.css, script.js, dan README.md).
 2. Buka file index.html di browser (tidak perlu server).
 3. Tambahkan kegiatan baru melalui form.
 4. Data akan otomatis tersimpan di localStorage browser.
 5. Navigasi antara menu Beranda, Jadwal Kuliah, dan Jadwal Kegiatan tanpa reload halaman.
+
