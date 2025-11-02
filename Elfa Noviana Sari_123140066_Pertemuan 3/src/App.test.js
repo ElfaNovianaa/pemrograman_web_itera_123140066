@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { BookProvider, useBooks } from "./context/BookContext";
-import App from "./App";
-import HomePage from "./pages/HomePage/HomePage";
+import App from "../../src/App";
+import HomePage from "./pages/StatsPage/HomePage/HomePage";
 import StatsPage from "./pages/StatsPage/StatsPage";
 import useBookStats from "./hooks/useBookStats";
 
