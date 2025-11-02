@@ -10,21 +10,19 @@ Melalui aplikasi ini, pengguna bisa mencatat dan mengatur daftar buku yang sudah
 Aplikasi ini memungkinkan pengguna melakukan manajemen data buku secara penuh CRUD dengan fitur-fitur berikut:
 
 ### Fitur Utama:
-- **Tambah, Edit, dan Hapus Buku**
-  Pengguna dapat menambahkan buku baru lengkap dengan judul, penulis, dan status.
-- **Manajemen Status Buku**
-  - **Dimiliki** — Buku yang sudah ada di rak.
-  - **Sedang Dibaca** — Buku yang sedang aktif dibaca.
-  - **wishlist** — Buku yang ingin dibeli.
-- **Filter & Pencarian**
-  - Cari buku berdasarkan **judul** atau **penulis**.
-  - Filter berdasarkan status (Semua, Dimiliki, Dibaca, Wishlist).
-- **Penyimpanan Lokal (localStorage)**
-  - Semua data buku disimpan otomatis di browser dan tidak hilang meskipun ditutup.
-- **Halaman Statistik Buku**
-  - Menampilkan total dan jumlah buku per kategori di halaman `/stats`.
-- **Navigasi Multi-Halaman**
-  - Menggunakan **React Router** untuk berpindah antar halaman tanpa reload.
+1. Fitur Dasar
+- Tambah Buku Baru - Input judul, penulis, dan status buku
+- Edit Buku - Perbarui informasi buku kapan saja
+- Hapus Buku - Hapus buku dari koleksi dengan konfirmasi
+- Pencarian Real-time - Cari buku berdasarkan judul atau penulis
+- Filter Status dengan Filter buku: Semua, Dimiliki, Dibaca, Wishlist
+
+2. Halaman Statistik
+Total buku dalam koleksi
+Jumlah buku yang sudah dimiliki
+Jumlah buku yang sedang dibaca
+Jumlah buku di wishlist
+Daftar 5 buku terbaru yang ditambahkan
 
 ---
 
@@ -81,7 +79,13 @@ Data buku disimpan secara lokal di browser menggunakan **localStorage** agar tet
 8. Dynamic Filtering
 Fitur pencarian dan filter buku memanfaatkan state dan event handler di React untuk memperbarui tampilan daftar buku secara real-time.
 
-## 5. Laporan Testing
+## 5. Komentar Penting dalam Kode 
+// BookContext.js 
+// Context global untuk menyimpan dan mengelola daftar buku pengguna const BookContext = createContext(); 
+// useLocalStorage.js 
+// Hook custom untuk menyimpan dan mengambil data dari localStorage try { localStorage.setItem(key, JSON.stringify(value)); } catch (error) { console.error('Gagal menyimpan ke localStorage:', error); }
+
+## 6. Laporan Testing
 *Testing* dilakukan menggunakan **React Testing Library** dan **Jest**. File tes utama adalah `src/App.test.js`.
 ![Gambar WhatsApp 2025-11-02 pukul 09 29 23_4caa8939](https://github.com/user-attachments/assets/d3b54af2-4e4e-4f20-964f-3c3e33eb7e90)
 
