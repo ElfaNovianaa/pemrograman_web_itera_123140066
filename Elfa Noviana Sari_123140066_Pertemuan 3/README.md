@@ -1,7 +1,7 @@
 # Aplikasi Manajemen Buku Pribadi
 
-Aplikasi web berbasis **React.js** untuk mengelola koleksi buku pribadi.  
-Pengguna dapat melacak buku yang mereka miliki, sedang dibaca, atau ingin dibeli. Aplikasi ini dikembangkan untuk memenuhi **Tugas 3 Praktikum Pemrograman Web**, dengan fokus pada penerapan **Hooks, Context API, React Router, dan Custom Hooks**.
+Aplikasi ini merupakan platform manajemen buku pribadi yang dibangun menggunakan React.js.
+Melalui aplikasi ini, pengguna bisa mencatat dan mengatur daftar buku yang sudah dimiliki, sedang dibaca, maupun yang ingin dibeli di kemudian hari dengan mengimplementasikan berbagai konsep inti React seperti Hooks, Context API, React Router, serta Custom Hooks dalam satu aplikasi yang fungsional dan interaktif.
 
 ---
 
@@ -15,7 +15,7 @@ Aplikasi ini memungkinkan pengguna melakukan manajemen data buku secara penuh CR
 - **Manajemen Status Buku**
   - **Dimiliki** — Buku yang sudah ada di rak.
   - **Sedang Dibaca** — Buku yang sedang aktif dibaca.
-  - **Akan Dibeli** — Buku yang ingin dibeli (*wishlist*).
+  - **wishlist** — Buku yang ingin dibeli.
 - **Filter & Pencarian**
   - Cari buku berdasarkan **judul** atau **penulis**.
   - Filter berdasarkan status (Semua, Dimiliki, Dibaca, Wishlist).
@@ -63,21 +63,21 @@ Pastikan perangkat sudah terpasang:
 ## 4. Penjelasan Fitur React yang Digunakan
 Proyek ini mengimplementasikan berbagai konsep inti dan modern React:
 1. Functional Components
-Seluruh bagian aplikasi seperti BookForm, BookList, BookFilter, dan HomePage dibuat menggunakan functional components. Pendekatan ini membuat kode lebih ringkas, mudah dibaca, dan memanfaatkan fitur React Hooks secara optimal.
+Seluruh bagian aplikasi seperti **BookForm**, **BookList**, **BookFilter**, dan **HomePage** dibuat menggunakan functional components. Pendekatan ini membuat kode lebih ringkas, mudah dibaca, dan memanfaatkan fitur React Hooks secara optimal.
 2. useState Hook
 Digunakan untuk menyimpan dan mengubah data secara dinamis di komponen.
-Contohnya pada BookForm untuk menyimpan input pengguna (judul, penulis, kategori, dan tahun terbit).
+Contohnya pada **BookForm** untuk menyimpan input pengguna (judul, penulis, kategori, dan tahun terbit).
 3. useContext Hook
-Menggunakan React Context API untuk mengelola data buku secara global melalui BookContext.
+Menggunakan React Context API untuk mengelola data buku secara global melalui **BookContext**.
 Dengan cara ini, data bisa diakses dan diubah dari berbagai komponen tanpa perlu props drilling.
 4. useEffect Hook
-Digunakan untuk melakukan efek samping seperti mengambil data awal dari localStorage atau menyimpan perubahan data setiap kali daftar buku diperbarui.
+Digunakan untuk melakukan efek samping seperti mengambil data awal dari **localStorage** atau menyimpan perubahan data setiap kali daftar buku diperbarui.
 5. Component Reusability
-Setiap komponen (seperti BookForm, BookFilter, dan BookList) dibuat modular agar mudah digunakan kembali di halaman lain jika diperlukan.
+Setiap komponen (seperti **BookForm**, **BookFilter**, dan **BookList**) dibuat modular agar mudah digunakan kembali di halaman lain jika diperlukan.
 6. Props
-Data antar-komponen dikirim menggunakan props, contohnya dari HomePage ke BookList untuk menampilkan hasil filter buku.
+Data antar-komponen dikirim menggunakan props, contohnya dari **HomePage** ke **BookList** untuk menampilkan hasil filter buku.
 7. Local Storage Integration
-Data buku disimpan secara lokal di browser menggunakan localStorage agar tetap tersimpan walau halaman direfresh.
+Data buku disimpan secara lokal di browser menggunakan **localStorage** agar tetap tersimpan walau halaman direfresh.
 8. Dynamic Filtering
 Fitur pencarian dan filter buku memanfaatkan state dan event handler di React untuk memperbarui tampilan daftar buku secara real-time.
 
