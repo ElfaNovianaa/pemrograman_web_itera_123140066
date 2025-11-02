@@ -1,0 +1,57 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.recent-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ffe8f3;
+  transition: all 0.2s;
+}
+
+.recent-item:hover {
+  background: #fff5f9;
+  border-color: #ffc2d4;
+}
+
+.recent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.recent-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.recent-author {
+  font-size: 0.75rem;
+  color: #999;
+}

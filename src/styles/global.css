@@ -1,0 +1,38 @@
+/* Global Variables & Reset */
+:root {
+  --pink-primary: #ff69b4;
+  --pink-light: #ffb6d9;
+  --pink-dark: #ff1493;
+  --pink-bg: #fff0f6;
+  --pink-gradient: linear-gradient(135deg, #fff0f6 0%, #ffe4f3 100%);
+  --text-dark: #4a0e2a;
+  --text-light: #999;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(255, 105, 180, 0.1);
+  --shadow-md: 0 4px 15px rgba(255, 105, 180, 0.2);
+  --shadow-lg: 0 8px 32px rgba(255, 105, 180, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--pink-gradient);
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}

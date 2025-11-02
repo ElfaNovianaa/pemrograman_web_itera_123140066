@@ -1,0 +1,62 @@
+.filter-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffaec9;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem 0.65rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #ffe8f3;
+  font-size: 0.85rem;
+  outline: none;
+  box-sizing: border-box;
+  background: #fafafa;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #ffaec9;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid #ffe8f3;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: #ffc2d4;
+}
+
+.chip-active {
+  background: #ff6b9d;
+  color: white;
+  border-color: #ff6b9d;
+}
