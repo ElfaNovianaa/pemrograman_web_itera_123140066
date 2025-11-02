@@ -11,7 +11,7 @@ Aplikasi ini memungkinkan pengguna melakukan manajemen data buku secara penuh CR
 
 ### Fitur Utama:
 - **Tambah, Edit, dan Hapus Buku**
-  > Pengguna dapat menambahkan buku baru lengkap dengan judul, penulis, dan status.
+  Pengguna dapat menambahkan buku baru lengkap dengan judul, penulis, dan status.
 - **Manajemen Status Buku**
   - **Dimiliki** — Buku yang sudah ada di rak.
   - **Sedang Dibaca** — Buku yang sedang aktif dibaca.
