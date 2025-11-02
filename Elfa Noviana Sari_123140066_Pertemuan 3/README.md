@@ -89,6 +89,3 @@ Fitur pencarian dan filter buku memanfaatkan state dan event handler di React un
 **Perintah untuk Menjalankan Tes:**
 ```bash
 npm test
-
-
-   
