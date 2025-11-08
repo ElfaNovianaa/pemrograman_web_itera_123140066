@@ -1,4 +1,4 @@
-# Aplikasi Manajemen Buku Pribadi
+# Program Python Mengelola Data Mahasiswa
 
 Program Python ini dikembangkan untuk memenuhi tugas praktikum Pemrograman Web (Pertemuan 4) yang bertujuan mengelola data nilai mahasiswa secara interaktif menggunakan terminal. Program ini mengaplikasikan konsep **Fungsi**, **List**, **Dictionary**, dan **Custom Module**.
 
