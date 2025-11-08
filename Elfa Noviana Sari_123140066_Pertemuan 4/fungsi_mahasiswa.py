@@ -1,16 +1,8 @@
 def hitung_nilai_akhir(uts, uas, tugas):
-    """
-    Menghitung nilai akhir mahasiswa
-    Formula: 30% UTS + 40% UAS + 30% Tugas
-    """
     return (uts * 0.3) + (uas * 0.4) + (tugas * 0.3)
 
 
 def tentukan_grade(nilai_akhir):
-    """
-    Menentukan grade berdasarkan nilai akhir
-    A: ≥80, B: ≥70, C: ≥60, D: ≥50, E: <50
-    """
     if nilai_akhir >= 80:
         return 'A'
     elif nilai_akhir >= 70:
@@ -24,9 +16,6 @@ def tentukan_grade(nilai_akhir):
 
 
 def tampilkan_tabel(data_mahasiswa):
-    """
-    Menampilkan data mahasiswa dalam format tabel
-    """
     print("\n" + "="*100)
     print(f"{'No':<5} {'Nama':<20} {'NIM':<12} {'UTS':<8} {'UAS':<8} {'Tugas':<8} {'Nilai Akhir':<13} {'Grade':<8}")
     print("="*100)
@@ -42,9 +31,6 @@ def tampilkan_tabel(data_mahasiswa):
 
 
 def cari_nilai_tertinggi(data_mahasiswa):
-    """
-    Mencari mahasiswa dengan nilai tertinggi
-    """
     mhs_terbaik = data_mahasiswa[0]
     nilai_tertinggi = hitung_nilai_akhir(mhs_terbaik['nilai_uts'], 
                                          mhs_terbaik['nilai_uas'], 
@@ -60,9 +46,6 @@ def cari_nilai_tertinggi(data_mahasiswa):
 
 
 def cari_nilai_terendah(data_mahasiswa):
-    """
-    Mencari mahasiswa dengan nilai terendah
-    """
     mhs_terendah = data_mahasiswa[0]
     nilai_terendah = hitung_nilai_akhir(mhs_terendah['nilai_uts'], 
                                         mhs_terendah['nilai_uas'], 
@@ -78,9 +61,6 @@ def cari_nilai_terendah(data_mahasiswa):
 
 
 def hitung_rata_rata(data_mahasiswa):
-    """
-    Menghitung rata-rata nilai kelas
-    """
     total = 0
     for mhs in data_mahasiswa:
         nilai = hitung_nilai_akhir(mhs['nilai_uts'], mhs['nilai_uas'], mhs['nilai_tugas'])
@@ -90,9 +70,6 @@ def hitung_rata_rata(data_mahasiswa):
 
 
 def filter_grade(data_mahasiswa, grade):
-    """
-    Filter mahasiswa berdasarkan grade
-    """
     hasil = []
     for mhs in data_mahasiswa:
         nilai = hitung_nilai_akhir(mhs['nilai_uts'], mhs['nilai_uas'], mhs['nilai_tugas'])
@@ -103,9 +80,6 @@ def filter_grade(data_mahasiswa, grade):
 
 
 def input_mahasiswa():
-    """
-    Input data mahasiswa baru
-    """
     print("\n=== INPUT DATA MAHASISWA BARU ===")
     
     nama = input("Nama: ")
