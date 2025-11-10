@@ -136,4 +136,13 @@ Penjelasan : Tampilan ketika menambah buku ke perpustakaan
 Penjelasan : Tampilan ketika menambah majalah ke perpustakaan
 
 <img width="1062" height="516" alt="image" src="https://github.com/user-attachments/assets/dee71d75-bdd8-4e4c-9380-8f5cf0420312" />
+Penjelasan : Tampilan ketika mencari item berdasarkan ID
 
+<img width="1097" height="369" alt="image" src="https://github.com/user-attachments/assets/f8dcfa12-ad1f-4fd2-81b1-63dc693bad5c" />
+Penjelasan : Tampilan ketika mencari item berdasarkan judul
+
+<img width="1096" height="487" alt="image" src="https://github.com/user-attachments/assets/09dd0550-ae42-4510-97cf-c85c2e6292c7" />
+Penjelasan : Peminjaman item dan terhubung dengan statis (terlihat 1 peminjaman)
+
+<img width="1170" height="492" alt="image" src="https://github.com/user-attachments/assets/1f74ad72-06be-4262-9371-e89a6a3f3621" />
+Penjelasan : Pengembalian item dan terhubung dengan statis (terlihat 0 peminjaman)
