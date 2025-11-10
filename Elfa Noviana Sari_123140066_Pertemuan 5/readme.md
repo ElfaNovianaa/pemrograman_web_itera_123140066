@@ -81,7 +81,7 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
     * `return_item()`: Mengembalikan item
     * `get_statistics()`: Menampilkan statistik perpustakaan
 
-## 🎯 Konsep OOP yang Diterapkan
+## Konsep OOP yang Diterapkan
 
 1.  **Inheritance**
     * `Book` dan `Magazine` mewarisi dari *abstract class* `LibraryItem`
