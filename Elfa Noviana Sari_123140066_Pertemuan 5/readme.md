@@ -114,14 +114,26 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
     * Method *abstract* (`@abstractmethod`) memaksa *subclass* untuk implementasi
     * Interface konsisten untuk semua *library items*
 
-## Cara Menggunakan Program
+## Navigasi Menu
+- Tambah Buku → Menambahkan buku baru ke perpustakaan
+- Tambah Majalah → Menambahkan majalah baru ke perpustakaan
+- Tampilkan Semua Item → Melihat semua koleksi perpustakaan
+- Cari Item (ID) → Mencari item dengan ID spesifik
+- Cari Item (Judul) → Mencari item berdasarkan judul
+- Pinjam Item → Meminjam item yang tersedia
+- Kembalikan Item → Mengembalikan item yang dipinjam
+- Statistik → Melihat statistik perpustakaan
+- Keluar → Keluar dari program
 
-### Persyaratan
+## Tampilan Program
+<img width="1016" height="566" alt="image" src="https://github.com/user-attachments/assets/24bfbc4a-b528-42aa-808d-adfbf606c28b" />
+Penjelasan : Tampilan Semua Item Perpustakaan
 
-* Python 3.7 atau lebih tinggi
-* Module `abc`, `typing`, `datetime` (sudah *built-in*)
+<img width="1103" height="409" alt="image" src="https://github.com/user-attachments/assets/ac205f96-a87a-4d9f-8a1e-80596cc18c4a" />
+Penjelasan : Tampilan ketika menambah buku ke perpustakaan
 
-### Menjalankan Program
+<img width="1117" height="446" alt="image" src="https://github.com/user-attachments/assets/1bc849fe-f5b9-4d9a-a272-2f707f1e974e" />
+Penjelasan : Tampilan ketika menambah majalah ke perpustakaan
 
-```bash
-python library_management.py
+<img width="1062" height="516" alt="image" src="https://github.com/user-attachments/assets/dee71d75-bdd8-4e4c-9380-8f5cf0420312" />
+
