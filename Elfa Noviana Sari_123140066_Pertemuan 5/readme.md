@@ -1,8 +1,8 @@
-# 📚 Sistem Manajemen Perpustakaan Sederhana
+# Sistem Manajemen Perpustakaan Sederhana
 
 Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan konsep Object-Oriented Programming (OOP) untuk mengelola koleksi perpustakaan. Program ini memungkinkan pengguna untuk menambah, mencari, meminjam, dan mengembalikan item perpustakaan seperti buku dan majalah.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 * **Manajemen Item Perpustakaan**
     * Menambahkan buku dengan detail lengkap (judul, penulis, tahun, jumlah halaman)
@@ -29,7 +29,7 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
     * Tampilan informasi terformat dengan *box* ASCII
     * *Feedback* yang jelas untuk setiap aksi
 
-## 🏗️ Struktur OOP
+## Struktur OOP
 
 ### 1. Abstract Class: `LibraryItem`
 
@@ -83,12 +83,12 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
 
 ## 🎯 Konsep OOP yang Diterapkan
 
-1.  **Inheritance (30%) ✅**
+1.  **Inheritance**
     * `Book` dan `Magazine` mewarisi dari *abstract class* `LibraryItem`
     * Menggunakan `super().__init__()` untuk memanggil *constructor parent class*
     * Mewarisi method `borrow()` dan `return_item()`
 
-2.  **Encapsulation (25%) ✅**
+2.  **Encapsulation**
     * *Private attributes* (`__item_id`, `__name`, `__items`) dengan *name mangling*
     * *Protected attributes* (`_title`, `_year`, `_author`, dll)
     * *Property decorators* untuk *controlled access*:
@@ -104,17 +104,17 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
             self._title = value
         ```
 
-3.  **Polymorphism (20%) ✅**
+3.  **Polymorphism**
     * *Abstract methods* (`get_info()`, `get_category()`) yang diimplementasikan berbeda di setiap *subclass*
     * Setiap *subclass* meng-*override* method dengan implementasi spesifik sesuai jenisnya
     * *Duck typing*: `Library` dapat menangani berbagai tipe item tanpa perlu tahu tipe spesifiknya
 
-4.  **Abstraction (15%) ✅**
+4.  **Abstraction**
     * Menggunakan `ABC` (*Abstract Base Class*) dari *module* `abc`
     * Method *abstract* (`@abstractmethod`) memaksa *subclass* untuk implementasi
     * Interface konsisten untuk semua *library items*
 
-## 📋 Cara Menggunakan Program
+## Cara Menggunakan Program
 
 ### Persyaratan
 
