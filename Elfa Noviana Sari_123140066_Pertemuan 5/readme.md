@@ -1,8 +1,8 @@
-# 📚 Sistem Manajemen Perpustakaan Sederhana
+# Sistem Manajemen Perpustakaan Sederhana
 
 Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan konsep Object-Oriented Programming (OOP) untuk mengelola koleksi perpustakaan. Program ini memungkinkan pengguna untuk menambah, mencari, meminjam, dan mengembalikan item perpustakaan seperti buku dan majalah.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 * **Manajemen Item Perpustakaan**
     * Menambahkan buku dengan detail lengkap (judul, penulis, tahun, jumlah halaman)
@@ -29,7 +29,7 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
     * Tampilan informasi terformat dengan *box* ASCII
     * *Feedback* yang jelas untuk setiap aksi
 
-## 🏗️ Struktur OOP
+## Struktur OOP
 
 ### 1. Abstract Class: `LibraryItem`
 
@@ -81,14 +81,14 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
     * `return_item()`: Mengembalikan item
     * `get_statistics()`: Menampilkan statistik perpustakaan
 
-## 🎯 Konsep OOP yang Diterapkan
+## Konsep OOP yang Diterapkan
 
-1.  **Inheritance (30%) ✅**
+1.  **Inheritance**
     * `Book` dan `Magazine` mewarisi dari *abstract class* `LibraryItem`
     * Menggunakan `super().__init__()` untuk memanggil *constructor parent class*
     * Mewarisi method `borrow()` dan `return_item()`
 
-2.  **Encapsulation (25%) ✅**
+2.  **Encapsulation**
     * *Private attributes* (`__item_id`, `__name`, `__items`) dengan *name mangling*
     * *Protected attributes* (`_title`, `_year`, `_author`, dll)
     * *Property decorators* untuk *controlled access*:
@@ -104,24 +104,45 @@ Sistem Manajemen Perpustakaan adalah aplikasi berbasis Python yang menerapkan ko
             self._title = value
         ```
 
-3.  **Polymorphism (20%) ✅**
+3.  **Polymorphism**
     * *Abstract methods* (`get_info()`, `get_category()`) yang diimplementasikan berbeda di setiap *subclass*
     * Setiap *subclass* meng-*override* method dengan implementasi spesifik sesuai jenisnya
     * *Duck typing*: `Library` dapat menangani berbagai tipe item tanpa perlu tahu tipe spesifiknya
 
-4.  **Abstraction (15%) ✅**
+4.  **Abstraction**
     * Menggunakan `ABC` (*Abstract Base Class*) dari *module* `abc`
     * Method *abstract* (`@abstractmethod`) memaksa *subclass* untuk implementasi
     * Interface konsisten untuk semua *library items*
 
-## 📋 Cara Menggunakan Program
+## Navigasi Menu
+- Tambah Buku → Menambahkan buku baru ke perpustakaan
+- Tambah Majalah → Menambahkan majalah baru ke perpustakaan
+- Tampilkan Semua Item → Melihat semua koleksi perpustakaan
+- Cari Item (ID) → Mencari item dengan ID spesifik
+- Cari Item (Judul) → Mencari item berdasarkan judul
+- Pinjam Item → Meminjam item yang tersedia
+- Kembalikan Item → Mengembalikan item yang dipinjam
+- Statistik → Melihat statistik perpustakaan
+- Keluar → Keluar dari program
 
-### Persyaratan
+## Tampilan Program
+<img width="1016" height="566" alt="image" src="https://github.com/user-attachments/assets/24bfbc4a-b528-42aa-808d-adfbf606c28b" />
+Penjelasan : Tampilan Semua Item Perpustakaan
 
-* Python 3.7 atau lebih tinggi
-* Module `abc`, `typing`, `datetime` (sudah *built-in*)
+<img width="1103" height="409" alt="image" src="https://github.com/user-attachments/assets/ac205f96-a87a-4d9f-8a1e-80596cc18c4a" />
+Penjelasan : Tampilan ketika menambah buku ke perpustakaan
 
-### Menjalankan Program
+<img width="1117" height="446" alt="image" src="https://github.com/user-attachments/assets/1bc849fe-f5b9-4d9a-a272-2f707f1e974e" />
+Penjelasan : Tampilan ketika menambah majalah ke perpustakaan
 
-```bash
-python library_management.py
+<img width="1062" height="516" alt="image" src="https://github.com/user-attachments/assets/dee71d75-bdd8-4e4c-9380-8f5cf0420312" />
+Penjelasan : Tampilan ketika mencari item berdasarkan ID
+
+<img width="1097" height="369" alt="image" src="https://github.com/user-attachments/assets/f8dcfa12-ad1f-4fd2-81b1-63dc693bad5c" />
+Penjelasan : Tampilan ketika mencari item berdasarkan judul
+
+<img width="1096" height="487" alt="image" src="https://github.com/user-attachments/assets/09dd0550-ae42-4510-97cf-c85c2e6292c7" />
+Penjelasan : Peminjaman item dan terhubung dengan statis (terlihat 1 peminjaman)
+
+<img width="1170" height="492" alt="image" src="https://github.com/user-attachments/assets/1f74ad72-06be-4262-9371-e89a6a3f3621" />
+Penjelasan : Pengembalian item dan terhubung dengan statis (terlihat 0 peminjaman)
