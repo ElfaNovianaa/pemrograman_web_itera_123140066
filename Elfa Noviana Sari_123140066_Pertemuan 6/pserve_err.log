@@ -1,0 +1,5 @@
+C:\Users\ASUS\tugas3-praktikum-pemweb\Elfa Noviana Sari_123140066_Pertemuan 6\venv\Lib\site-packages\pyramid\path.py:3: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Starting server in PID 23628.
+2025-12-06 00:28:34,277 INFO  [waitress:449][MainThread] Serving on http://[::1]:6543
+2025-12-06 00:28:34,279 INFO  [waitress:449][MainThread] Serving on http://127.0.0.1:6543
