@@ -1,19 +1,12 @@
+"""
+View handlers untuk API endpoints matakuliah
+"""
 from pyramid.view import view_config
 from pyramid.response import Response
 from sqlalchemy.exc import IntegrityError
 import json
 from .models import Matakuliah
-
-
-def _parse_positive_int(value, field_name):
-    """Helper untuk memastikan nilai int positif; menerima string angka."""
-    try:
-        int_value = int(value)
-    except (TypeError, ValueError):
-        raise ValueError(f'{field_name} must be a positive integer')
-    if int_value <= 0:
-        raise ValueError(f'{field_name} must be a positive integer')
-    return int_value
+from sqlalchemy import text
 
 
 @view_config(route_name='get_all_matakuliah', request_method='GET', renderer='json')
@@ -74,7 +67,6 @@ def get_matakuliah(request):
 
 
 @view_config(route_name='create_matakuliah', request_method='POST', renderer='json')
-@view_config(route_name='get_all_matakuliah', request_method='POST', renderer='json')
 def create_matakuliah(request):
     """
     Endpoint untuk menambahkan matakuliah baru
@@ -98,24 +90,24 @@ def create_matakuliah(request):
                 return {'error': f'Missing required field: {field}'}
         
         # Validasi tipe data
-        try:
-            sks_value = _parse_positive_int(data['sks'], 'SKS')
-            semester_value = _parse_positive_int(data['semester'], 'Semester')
-        except ValueError as e:
+        if not isinstance(data['sks'], int) or data['sks'] <= 0:
             request.response.status = 400
-            return {'error': str(e)}
+            return {'error': 'SKS must be a positive integer'}
+        
+        if not isinstance(data['semester'], int) or data['semester'] <= 0:
+            request.response.status = 400
+            return {'error': 'Semester must be a positive integer'}
         
         # Buat object Matakuliah baru
         new_matakuliah = Matakuliah(
             kode_mk=data['kode_mk'],
             nama_mk=data['nama_mk'],
-            sks=sks_value,
-            semester=semester_value
+            sks=data['sks'],
+            semester=data['semester']
         )
         
         # Tambahkan ke database
         request.dbsession.add(new_matakuliah)
-        request.dbsession.flush()  # Untuk mendapatkan ID yang di-generate
         
         request.response.status = 201
         return {
@@ -125,7 +117,6 @@ def create_matakuliah(request):
         
     except IntegrityError:
         # Error jika kode_mk sudah ada (karena unique constraint)
-        request.dbsession.rollback()
         request.response.status = 400
         return {'error': 'Kode MK already exists'}
     except ValueError as e:
@@ -170,19 +161,15 @@ def update_matakuliah(request):
         if 'nama_mk' in data:
             matakuliah.nama_mk = data['nama_mk']
         if 'sks' in data:
-            try:
-                matakuliah.sks = _parse_positive_int(data['sks'], 'SKS')
-            except ValueError as e:
+            if not isinstance(data['sks'], int) or data['sks'] <= 0:
                 request.response.status = 400
-                return {'error': str(e)}
+                return {'error': 'SKS must be a positive integer'}
+            matakuliah.sks = data['sks']
         if 'semester' in data:
-            try:
-                matakuliah.semester = _parse_positive_int(data['semester'], 'Semester')
-            except ValueError as e:
+            if not isinstance(data['semester'], int) or data['semester'] <= 0:
                 request.response.status = 400
-                return {'error': str(e)}
-        
-        request.dbsession.flush()
+                return {'error': 'Semester must be a positive integer'}
+            matakuliah.semester = data['semester']
         
         return {
             'message': 'Matakuliah updated successfully',
@@ -190,7 +177,6 @@ def update_matakuliah(request):
         }
         
     except IntegrityError:
-        request.dbsession.rollback()
         request.response.status = 400
         return {'error': 'Kode MK already exists'}
     except Exception as e:
@@ -222,7 +208,10 @@ def delete_matakuliah(request):
             request.response.status = 404
             return {'error': 'Matakuliah not found'}
         
+        reset_sql = text("SELECT setval('matakuliah_id_seq', (SELECT MAX(id) FROM matakuliah));")
+
         # Hapus dari database
+        request.dbsession.execute(reset_sql)
         request.dbsession.delete(matakuliah)
         
         return {'message': 'Matakuliah deleted successfully'}
