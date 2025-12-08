@@ -124,7 +124,7 @@ Mengambil daftar semua matakuliah yang tersimpan dalam database.
 curl -X GET http://localhost:6543/api/matakuliah
 ```
 
-**Success Response (200 OK):**
+**Success Response :**
 ```json
 {
   "matakuliahs": [
@@ -145,10 +145,11 @@ curl -X GET http://localhost:6543/api/matakuliah
   ]
 }
 ```
+![Gambar WhatsApp 2025-12-08 pukul 19 02 05_ecfc2e77](https://github.com/user-attachments/assets/c6261a90-c033-4a38-b578-f8eae77adde0)
 
 ---
 
-### 2. Get Matakuliah Detail
+### 2. Get Matakuliah by ID
 
 Mengambil detail satu matakuliah berdasarkan ID.
 
@@ -157,7 +158,7 @@ Mengambil detail satu matakuliah berdasarkan ID.
 curl -X GET http://localhost:6543/api/matakuliah/1
 ```
 
-**Success Response (200 OK):**
+**Success Response :**
 ```json
 {
   "matakuliah": {
@@ -169,13 +170,7 @@ curl -X GET http://localhost:6543/api/matakuliah/1
   }
 }
 ```
-
-**Error Response (404 Not Found):**
-```json
-{
-  "error": "Matakuliah tidak ditemukan"
-}
-```
+![Gambar WhatsApp 2025-12-08 pukul 19 04 11_035568e1](https://github.com/user-attachments/assets/9a477bd0-b28e-4de0-aeb1-1020f17db20a)
 
 ---
 
@@ -208,13 +203,8 @@ curl -X POST http://localhost:6543/api/matakuliah \
   }
 }
 ```
-
-**Error Response (400 Bad Request):**
-```json
-{
-  "error": "Field kode_mk, nama_mk, sks, dan semester wajib diisi"
-}
-```
+![Gambar WhatsApp 2025-12-08 pukul 19 52 05_0ce80d6b](https://github.com/user-attachments/assets/834c3050-8dfa-4e28-9a4a-8a18f4cbfae2)
+![Gambar WhatsApp 2025-12-08 pukul 19 52 33_e2bd0315](https://github.com/user-attachments/assets/159513fb-4a41-4f95-9eb2-85cbd888bae6)
 
 ---
 
@@ -245,13 +235,8 @@ curl -X PUT http://localhost:6543/api/matakuliah/2 \
   }
 }
 ```
+![Gambar WhatsApp 2025-12-08 pukul 19 57 31_6b8ba33e](https://github.com/user-attachments/assets/645520c6-ce94-4a25-b5f5-348782658488)
 
-**Error Response (404 Not Found):**
-```json
-{
-  "error": "Matakuliah tidak ditemukan"
-}
-```
 
 ---
 
@@ -271,18 +256,8 @@ curl -X DELETE http://localhost:6543/api/matakuliah/2
   "message": "Matakuliah ID 2 berhasil dihapus"
 }
 ```
+![Gambar WhatsApp 2025-12-08 pukul 20 00 20_90a3eadd](https://github.com/user-attachments/assets/5cf95482-9fdb-4e60-98ac-dd11fb0c348b)
 
-**Alternative Success Response (204 No Content):**
-```
-(No response body)
-```
-
-**Error Response (404 Not Found):**
-```json
-{
-  "error": "Matakuliah tidak ditemukan"
-}
-```
 
 ## Testing
 
