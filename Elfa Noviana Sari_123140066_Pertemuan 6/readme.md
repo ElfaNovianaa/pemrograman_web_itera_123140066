@@ -152,6 +152,9 @@ curl -X GET http://localhost:6543/api/matakuliah
   ]
 }
 ```
+![Gambar WhatsApp 2025-12-08 pukul 19 02 05_77a41cb7](https://github.com/user-attachments/assets/6c4f137a-16f1-452a-9549-fa279385683d)
+
+![Gambar WhatsApp 2025-12-08 pukul 19 02 46_e4e39e52](https://github.com/user-attachments/assets/26126a87-9ed9-4509-9ceb-aaf73b8a633a)
 
 ### 2. Get Matakuliah by ID
 
@@ -174,6 +177,7 @@ curl -X GET http://localhost:6543/api/matakuliah/1
   }
 }
 ```
+![Gambar WhatsApp 2025-12-08 pukul 19 04 11_b4caecb4](https://github.com/user-attachments/assets/8d68a946-7d4e-49ae-99e2-67786c83fea3)
 
 ### 3. Add Matakuliah
 
@@ -190,6 +194,10 @@ curl -X POST http://localhost:6543/api/matakuliah \
        "semester": 4
      }'
 ```
+![Gambar WhatsApp 2025-12-08 pukul 19 52 05_b847e9af](https://github.com/user-attachments/assets/a3e86341-0fea-4bce-a4f3-53ecfb464314)
+![Gambar WhatsApp 2025-12-08 pukul 19 52 33_5a61994d](https://github.com/user-attachments/assets/0803869b-0f75-490c-8d37-842276f220b1)
+![Gambar WhatsApp 2025-12-08 pukul 19 53 14_7fa7046f](https://github.com/user-attachments/assets/01f2d4cd-4b27-4846-ba87-d8a3531d87d8)
+
 
 **Success Response (200 OK):**
 ```json
@@ -232,6 +240,10 @@ curl -X PUT http://localhost:6543/api/matakuliah/4 \
   }
 }
 ```
+![Uploading Gambar WhatsApp 2025-12-08 pukul 19.57.31_9e5de435.jpg…]()
+![Uploading Gambar WhatsApp 2025-12-08 pukul 19.58.18_56431a10.jpg…]()
+![Uploading Gambar WhatsApp 2025-12-08 pukul 19.58.58_c3a2b5c9.jpg…]()
+
 
 ### 5. Delete Matakuliah
 
@@ -248,6 +260,10 @@ curl -X DELETE http://localhost:6543/api/matakuliah/2
   "message": "Matakuliah deleted successfully"
 }
 ```
+![Uploading Gambar WhatsApp 2025-12-08 pukul 20.00.20_cfd4cf75.jpg…]()
+![Uploading Gambar WhatsApp 2025-12-08 pukul 20.00.51_05094d71.jpg…]()
+![Uploading Gambar WhatsApp 2025-12-08 pukul 20.01.21_53ff7950.jpg…]()
+
 
 ## 🧪 Testing
 
@@ -360,13 +376,3 @@ listen = localhost:6544
 - **NIM:** 123140066
 - **Kelas:** Pertemuan 6
 - **Repository:** https://github.com/ElfaNovianaa/pemrograman_web_itera_123140066
-
-## 📝 Lisensi
-
-Proyek ini dibuat untuk keperluan akademik (Tugas Praktikum Pemrograman Web).
-
----
-
-⭐ **Jangan lupa untuk memberikan star jika repository ini bermanfaat!**
-
-**Last Updated:** 10 Desember 2025
