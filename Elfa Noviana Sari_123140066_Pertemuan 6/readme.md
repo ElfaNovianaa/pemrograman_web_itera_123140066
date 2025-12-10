@@ -2,7 +2,7 @@
 
 Aplikasi REST API sederhana untuk pengelolaan data Matakuliah yang dibangun menggunakan Pyramid Framework. Aplikasi ini menyediakan fitur CRUD (Create, Read, Update, Delete) lengkap untuk entitas matakuliah dengan database PostgreSQL.
 
-## Deskripsi Proyek
+## 📋 Deskripsi Proyek
 
 Proyek ini adalah aplikasi backend API untuk manajemen data matakuliah yang dibuat sebagai tugas praktikum. Aplikasi ini memungkinkan pengguna untuk melakukan operasi dasar seperti menambah, melihat, mengubah, dan menghapus data matakuliah melalui REST API.
 
@@ -13,7 +13,7 @@ Proyek ini adalah aplikasi backend API untuk manajemen data matakuliah yang dibu
 - **ORM:** SQLAlchemy 2.0
 - **Migration:** Alembic
 
-## Cara Instalasi
+## 🚀 Cara Instalasi
 
 Ikuti langkah-langkah berikut untuk menyiapkan environment pengembangan di komputer Anda:
 
@@ -51,7 +51,7 @@ pip install -e ".[testing]"
 
 Aplikasi ini menggunakan PostgreSQL sebagai database. Ikuti langkah berikut:
 
-**a. Buat Database Baru:**
+#### a. Buat Database Baru:
 
 ```bash
 # Login sebagai user postgres
@@ -63,7 +63,7 @@ CREATE DATABASE pyramid_matakuliah;
 \q
 ```
 
-**b. Konfigurasi Connection String:**
+#### b. Konfigurasi Connection String:
 
 Edit file `development.ini` dan sesuaikan baris berikut dengan kredensial PostgreSQL Anda:
 
@@ -71,7 +71,7 @@ Edit file `development.ini` dan sesuaikan baris berikut dengan kredensial Postgr
 sqlalchemy.url = postgresql://user_matakuliah:pass_matakuliah@localhost:5432/pyramid_matakuliah
 ```
 
-**c. Konfigurasi Alembic:**
+#### c. Konfigurasi Alembic:
 
 Pastikan file `alembic.ini` memiliki connection string yang sama:
 
@@ -81,7 +81,7 @@ sqlalchemy.url = postgresql://user_matakuliah:pass_matakuliah@localhost:5432/pyr
 
 > **Catatan:** Ganti `user_matakuliah` dan `pass_matakuliah` dengan username dan password PostgreSQL Anda. Pastikan PostgreSQL server sudah berjalan di port 5432.
 
-## Cara Menjalankan
+## 🏃 Cara Menjalankan
 
 ### 1. Menjalankan Migrasi Database
 
@@ -97,7 +97,7 @@ initialize_pyramid_matakuliah_db development.ini
 
 ### 2. Menjalankan Server
 
-Jalankan server aplikasi menggunakan `pserve`:
+Jalankan server aplikasi menggunakan pserve:
 
 ```bash
 pserve development.ini
@@ -111,7 +111,7 @@ Starting server in PID 12345.
 Serving on http://localhost:6543
 ```
 
-## API Endpoints
+## 📡 API Endpoints
 
 Berikut adalah dokumentasi lengkap untuk semua endpoint yang tersedia:
 
@@ -124,30 +124,34 @@ Mengambil daftar semua matakuliah yang tersimpan dalam database.
 curl -X GET http://localhost:6543/api/matakuliah
 ```
 
-**Success Response :**
+**Success Response:**
 ```json
 {
   "matakuliahs": [
     {
       "id": 1,
-      "kode_mk": "IF221",
-      "nama_mk": "Pemrograman Web",
+      "kode_mk": "IF101",
+      "nama_mk": "Basis Data",
       "sks": 3,
-      "semester": 4
+      "semester": 3
     },
     {
       "id": 2,
-      "kode_mk": "IF305",
-      "nama_mk": "Kecerdasan Buatan",
+      "kode_mk": "IF102",
+      "nama_mk": "Machine Learning",
       "sks": 3,
-      "semester": 5
+      "semester": 6
+    },
+    {
+      "id": 3,
+      "kode_mk": "IF103",
+      "nama_mk": "Deep Learning",
+      "sks": 3,
+      "semester": 7
     }
   ]
 }
 ```
-![Gambar WhatsApp 2025-12-08 pukul 19 02 05_ecfc2e77](https://github.com/user-attachments/assets/c6261a90-c033-4a38-b578-f8eae77adde0)
-
----
 
 ### 2. Get Matakuliah by ID
 
@@ -158,7 +162,7 @@ Mengambil detail satu matakuliah berdasarkan ID.
 curl -X GET http://localhost:6543/api/matakuliah/1
 ```
 
-**Success Response :**
+**Success Response:**
 ```json
 {
   "matakuliah": {
@@ -170,9 +174,6 @@ curl -X GET http://localhost:6543/api/matakuliah/1
   }
 }
 ```
-![Gambar WhatsApp 2025-12-08 pukul 19 04 11_035568e1](https://github.com/user-attachments/assets/9a477bd0-b28e-4de0-aeb1-1020f17db20a)
-
----
 
 ### 3. Add Matakuliah
 
@@ -183,30 +184,26 @@ Menambahkan data matakuliah baru ke dalam database.
 curl -X POST http://localhost:6543/api/matakuliah \
      -H "Content-Type: application/json" \
      -d '{
-       "kode_mk": "IF305",
-       "nama_mk": "Kecerdasan Buatan",
+       "kode_mk": "IF104",
+       "nama_mk": "Pemrograman Web",
        "sks": 3,
-       "semester": 5
+       "semester": 4
      }'
 ```
 
 **Success Response (200 OK):**
 ```json
 {
-  "success": true,
+  "message": "Matakuliah created successfully",
   "matakuliah": {
-    "id": 2,
-    "kode_mk": "IF305",
-    "nama_mk": "Kecerdasan Buatan",
+    "id": null,
+    "kode_mk": "IF104",
+    "nama_mk": "Pemrograman Web",
     "sks": 3,
-    "semester": 5
+    "semester": 4
   }
 }
 ```
-![Gambar WhatsApp 2025-12-08 pukul 19 52 05_0ce80d6b](https://github.com/user-attachments/assets/834c3050-8dfa-4e28-9a4a-8a18f4cbfae2)
-![Gambar WhatsApp 2025-12-08 pukul 19 52 33_e2bd0315](https://github.com/user-attachments/assets/159513fb-4a41-4f95-9eb2-85cbd888bae6)
-
----
 
 ### 4. Update Matakuliah
 
@@ -214,31 +211,27 @@ Memperbarui data matakuliah yang sudah ada berdasarkan ID.
 
 **Request:**
 ```bash
-curl -X PUT http://localhost:6543/api/matakuliah/2 \
+curl -X PUT http://localhost:6543/api/matakuliah/4 \
      -H "Content-Type: application/json" \
      -d '{
-       "nama_mk": "Kecerdasan Buatan Lanjut",
-       "sks": 4
+       "nama_mk": "Pemrograman Aplikasi Web",
+       "sks": 5
      }'
 ```
 
 **Success Response (200 OK):**
 ```json
 {
-  "success": true,
+  "message": "Matakuliah updated successfully",
   "matakuliah": {
-    "id": 2,
-    "kode_mk": "IF305",
-    "nama_mk": "Kecerdasan Buatan Lanjut",
-    "sks": 4,
-    "semester": 5
+    "id": 4,
+    "kode_mk": "IF104",
+    "nama_mk": "Pemrograman Aplikasi Web",
+    "sks": 5,
+    "semester": 4
   }
 }
 ```
-![Gambar WhatsApp 2025-12-08 pukul 19 57 31_6b8ba33e](https://github.com/user-attachments/assets/645520c6-ce94-4a25-b5f5-348782658488)
-
-
----
 
 ### 5. Delete Matakuliah
 
@@ -252,14 +245,11 @@ curl -X DELETE http://localhost:6543/api/matakuliah/2
 **Success Response (200 OK):**
 ```json
 {
-  "success": true,
-  "message": "Matakuliah ID 2 berhasil dihapus"
+  "message": "Matakuliah deleted successfully"
 }
 ```
-![Gambar WhatsApp 2025-12-08 pukul 20 00 20_90a3eadd](https://github.com/user-attachments/assets/5cf95482-9fdb-4e60-98ac-dd11fb0c348b)
 
-
-## Testing
+## 🧪 Testing
 
 ### Testing dengan cURL
 
@@ -324,15 +314,59 @@ curl -X POST http://localhost:6543/api/matakuliah \
      -d '{"kode_mk": "IF303", "nama_mk": "Basis Data", "sks": 3, "semester": 3}'
 ```
 
-## Struktur Database
+## 🗄️ Struktur Database
 
 ### Tabel Matakuliah
 
-| Kolom     | Tipe    | Constraint           | Deskripsi              |
-|-----------|---------|----------------------|------------------------|
-| id        | Integer | Primary Key          | ID unik (auto increment) |
-| kode_mk   | Text    | Unique, Not Null     | Kode mata kuliah       |
-| nama_mk   | Text    | Not Null             | Nama mata kuliah       |
-| sks       | Integer | Not Null             | Jumlah SKS             |
-| semester  | Integer | Not Null             | Semester pengambilan   |
+| Kolom | Tipe | Constraint | Deskripsi |
+|-------|------|------------|-----------|
+| id | Integer | Primary Key | ID unik (auto increment) |
+| kode_mk | Text | Unique, Not Null | Kode mata kuliah |
+| nama_mk | Text | Not Null | Nama mata kuliah |
+| sks | Integer | Not Null | Jumlah SKS |
+| semester | Integer | Not Null | Semester pengambilan |
 
+## 🔧 Troubleshooting
+
+### Error Koneksi Database
+
+Jika terjadi error koneksi database, pastikan:
+- PostgreSQL service sudah berjalan
+- Username, password, dan nama database sudah benar
+- Port 5432 tidak digunakan oleh aplikasi lain
+
+### Error saat Migrasi
+
+Jika ada error saat menjalankan migrasi:
+
+```bash
+# Drop semua tabel dan jalankan ulang migrasi
+alembic downgrade base
+alembic upgrade head
+```
+
+### Port 6543 Sudah Digunakan
+
+Jika port 6543 sudah digunakan, edit file `development.ini`:
+
+```ini
+[server:main]
+listen = localhost:6544
+```
+
+## 👨‍💻 Kontributor
+
+- **Nama:** Elfa Noviana Sari
+- **NIM:** 123140066
+- **Kelas:** Pertemuan 6
+- **Repository:** https://github.com/ElfaNovianaa/pemrograman_web_itera_123140066
+
+## 📝 Lisensi
+
+Proyek ini dibuat untuk keperluan akademik (Tugas Praktikum Pemrograman Web).
+
+---
+
+⭐ **Jangan lupa untuk memberikan star jika repository ini bermanfaat!**
+
+**Last Updated:** 10 Desember 2025
