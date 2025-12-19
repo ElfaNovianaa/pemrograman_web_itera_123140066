@@ -240,9 +240,10 @@ curl -X PUT http://localhost:6543/api/matakuliah/4 \
   }
 }
 ```
-![Uploading Gambar WhatsApp 2025-12-08 pukul 19.57.31_9e5de435.jpg…]()
-![Uploading Gambar WhatsApp 2025-12-08 pukul 19.58.18_56431a10.jpg…]()
-![Uploading Gambar WhatsApp 2025-12-08 pukul 19.58.58_c3a2b5c9.jpg…]()
+![WhatsApp Image 2025-12-19 at 12 52 32](https://github.com/user-attachments/assets/bb090c36-9e14-4d69-b03d-be811e3f00b1)
+![WhatsApp Image 2025-12-19 at 12 52 33](https://github.com/user-attachments/assets/c63a3371-15cc-449e-ac0f-c904ed709b3f)
+![WhatsApp Image 2025-12-19 at 12 52 33 (1)](https://github.com/user-attachments/assets/ea7a6e0c-10cf-40f1-8548-eac86d6a1458)
+
 
 
 ### 5. Delete Matakuliah
@@ -260,9 +261,10 @@ curl -X DELETE http://localhost:6543/api/matakuliah/2
   "message": "Matakuliah deleted successfully"
 }
 ```
-![Uploading Gambar WhatsApp 2025-12-08 pukul 20.00.20_cfd4cf75.jpg…]()
-![Uploading Gambar WhatsApp 2025-12-08 pukul 20.00.51_05094d71.jpg…]()
-![Uploading Gambar WhatsApp 2025-12-08 pukul 20.01.21_53ff7950.jpg…]()
+![WhatsApp Image 2025-12-19 at 12 52 33 (2)](https://github.com/user-attachments/assets/d7e03ba4-f398-46c3-881b-c972315d1661)
+![WhatsApp Image 2025-12-19 at 12 52 34](https://github.com/user-attachments/assets/7bd9f963-f647-43e4-aebb-b80823ff2dc5)
+![WhatsApp Image 2025-12-19 at 12 52 34 (1)](https://github.com/user-attachments/assets/8e643305-62e1-4a5a-beec-c8efdd5d50bd)
+
 
 
 ## 🧪 Testing
@@ -376,3 +378,4 @@ listen = localhost:6544
 - **NIM:** 123140066
 - **Kelas:** Pertemuan 6
 - **Repository:** https://github.com/ElfaNovianaa/pemrograman_web_itera_123140066
+
